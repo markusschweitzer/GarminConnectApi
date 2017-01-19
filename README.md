@@ -6,7 +6,7 @@ This will result in an authenticated WebClient which is able to call GarminConne
 
 ### Example
 
-```
+```csharp
 using (var gc = new GarminConnection())
 {
     if (!gc.Authenticate("username", "password", "http://somereferer.com"))
