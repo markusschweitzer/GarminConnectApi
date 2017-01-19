@@ -15,7 +15,7 @@ using (var gc = new GarminConnection())
     }
     else
     {
-        Console.WriteLine("Garmin Client authenticated.");
+        Console.WriteLine(string.Format("Garmin Client authenticated. DisplayName='{0}'", gc.DisplayName));
         
          var gda = new GarminDataAccess(gc);
          
