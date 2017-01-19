@@ -12,14 +12,13 @@ using (var gc = new GarminConnection())
     if (!gc.Authenticate("username", "password", "http://somereferer.com"))
     {
         Console.WriteLine("Authentication not successfull");
+         
+         var gda = new GarminDataAccess(gc);
+         var activities = gda.GetLatestActivities();
     }
     else
     {
         Console.WriteLine("Garmin Client authenticated.");
     }
-
-    var gda = new GarminDataAccess(gc);
-
-    var activities = gda.GetLatestActivities();
 }
 ```
